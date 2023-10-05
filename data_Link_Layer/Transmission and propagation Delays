@@ -1,0 +1,15 @@
+There are 4 types of delay 
+transmission delay
+propagation delay
+queue delay 
+processing delay 
+
+1 transmission delay - it is delay when data is put on link lets say we have Bandwidth of 100 bits / sec and we have packet size 1000 bits then time taken will be 
+                       packet size / Bandwidth , here 1000 / 100 = 10 sec.
+2 Propagation delat - it is delat to travel first bit to receiver delay , it depends over speed of medium in case of fiber optic it would be speed of light and in case of copper wire it would be nearly 70% of speed of light.
+3 queue delay - It depends upon the traffic of router 
+4 processing delay - it depends over the computational power of router and length of header of data packet.
+
+so total time = Tt + Tp + Tq + Tprocssing 
+               = L / B + distance / speed + 0 + 0 
+               = L/B + distance/speed
