@@ -29,5 +29,13 @@ Every NIC has fixed 48 bit MAC - ADDRESS , This Mac address is unique world wide
                       b) checkSum
                       c) CRC - cycle reduncy code - it is used in practice
 
-3 -> ERROR AND CONTROL FLOW -
+3 -> ERROR AND CONTROL FLOW - we have some algorithms to do this task 
+                              a) Go Back N 
+                              b) Selective Repeat
+                              c) Stop and Wait
+                             these are variation of sliding window and know as ARQ algorithms - Automatic Repeat Request 
+
+4-> MULTIPLE ACCESS - there are algorithm used to access multiple device in same network , in same network in case of WIFI or classical ethernet there is chance of collision so for that CSMA/CA algorithm used for WIFI and CSMA/CD for classical ethernet
+                      in case of switches we don't need such algo because it doesn't have collision .
+
                       
