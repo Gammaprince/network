@@ -19,4 +19,15 @@ Every NIC has fixed 48 bit MAC - ADDRESS , This Mac address is unique world wide
             so for this we have two types of method 
             a) byte stuffing -> it adds one more flag at the beginning of frame like FLAG + HEADER + PACKET + TRAILER , so it treat different frame if it found FLAG , now it is also possible that
                                 FLAG may also present in PACKET itself , so for this we use escape character to escape FLAG , so it will not consider as FLAG , it escape is there in PACKET then another escape add to ignore
-            b) bit stuffing->
+            b) bit stuffing-> it contains some bits pattern to recognize beginning of frame lets say , 111110 so it adds this to beginning of packet there also question may arise of same pattern in packet
+                              so for that in packet repeat it twice like 111110 111110 so that receiver will ignore this and not consider it as flag .
+                              bit stuffing is hard to implement that's why it is not used in practices.
+2 -> ERROR DETECTION - 
+                      if you physical media has caused any error in frames then it must be checked for errors in receiver side and if there is error receiver simply ignore the frame and wait for same frame to come
+                      to detect the errors we have multiple methods 
+                      a) Parity 
+                      b) checkSum
+                      c) CRC - cycle reduncy code - it is used in practice
+
+3 -> ERROR AND CONTROL FLOW -
+                      
