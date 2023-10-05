@@ -1,0 +1,22 @@
+Data_Link Layer is implemented in Network Interface card
+Every NIC has fixed 48 bit MAC - ADDRESS , This Mac address is unique world wide. Data link layer works on this MAC_Address
+  Consider a example where lot of LAN devices connect through switch then switch connect to ISP router then ISP to internet
+  communication happen in same LAN through Link Layer or from node to node 
+       for eg from switch to ISP communication happen in data link layer 
+  in home WIFI network , there is a chance of collision but not this happen in case of switch because switch has different connection for each other device connect in same LAN
+  also note that home WIFI network known as WLAN 
+  so for handeling collision in WLAN or WIFI there is protocol used names as CSMA/CA
+
+
+  FUNCTIONALITIES of DATA LINK LAYER 
+  1 -> DATA FRAMING -
+                      responsibility of data link layer to send IP data packet to another end correctly without any errors , so DLL takes packet from Internet layer and puts header which contains 
+                      source mac address and destination mac address + packet + trailer  trailer contains some check-sum to detect errors , you may get errot in physcal medium , like twisted pair cable , or Fibre optics
+                      so to handle this error there is checksum in trailer
+                      so DLL prepare frame to sent in binary through physical media because physical media undertands only binary , so there may be multiple frame to be send through physical media
+
+            Now how does receiving end figure out that new frame has started because , physical media is just binary ? 
+            so for this we have two types of method 
+            a) byte stuffing -> it adds one more flag at the beginning of frame like FLAG + HEADER + PACKET + TRAILER , so it treat different frame if it found FLAG , now it is also possible that
+                                FLAG may also present in PACKET itself , so for this we use escape character to escape FLAG , so it will not consider as FLAG , it escape is there in PACKET then another escape add to ignore
+            b) bit stuffing->
